@@ -9,8 +9,14 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest`
-# **Version 1.1.2**
+### `Latest (January 3rd, 2020)`
+# **Version 1.1.3**
+- New buoys: India, Taiwan and Azores!
+- UI improvements.
+
+<br>
+
+## **Version 1.1.2**
 - New iOS Today's Widget with the updated buoy's data.
 - Bug fixes and improvements.
 
