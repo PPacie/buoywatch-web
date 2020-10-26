@@ -17,7 +17,7 @@ Changelog for Buoywatch.
 
 <br>
 
-# **Version 1.1.3**
+## **Version 1.1.3**
 - New buoys: India, Taiwan and Azores!
 - UI improvements.
 
@@ -52,7 +52,7 @@ New Surf buoys added:
 <br>
 
 ### `Initial Release`
-# **Version 1.0.0**
+## **Version 1.0.0**
 - Independent Apple Watch app only version.
 - 24 Hour History Report Chart.
 - Buoy Notifications to score the best surf.
