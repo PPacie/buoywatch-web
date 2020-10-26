@@ -9,7 +9,14 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest (January 3rd, 2020)`
+### `Latest (October 25th, 2020)`
+# **Version 1.2.0**
+- New iOS 14 Widgets!
+- New watchOS complications supported: Graphic corner; Graphic circular; Modular small; Circular small.
+- Theme selection: Select between dark, light or automatic matching system appearance.
+
+<br>
+
 # **Version 1.1.3**
 - New buoys: India, Taiwan and Azores!
 - UI improvements.
