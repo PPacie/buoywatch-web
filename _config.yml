@@ -45,19 +45,19 @@ features                                  :
     
   - title                                 : Notifications
     description                           : Score the best surf with Notifications. Get alerted when the swell is above a specific wave height. Includes animated GIFs.
-    fontawesome_icon_name                 : bell 
-
-  - title                                 : Dark Mode Support
-    description                           : iOS 13 introduced a new Dark mode theme. Light or dark, the app will follow your style.
-    fontawesome_icon_name                 : adjust
-
-  - title                                 : Complications
-    description                           : Support for Modular and Graphic Apple Watch Complications. Get real-time wave data displayed at a glance.
-    fontawesome_icon_name                 : clock
-  
-  - title                                 : Today Widget
+    fontawesome_icon_name                 : bell
+    
+  - title                                 : iOS 14 Widgets!
     description                           : Swell info at a glance. Always easily accesible and customizable.
     fontawesome_icon_name                 : star
+
+  - title                                 : Complications
+    description                           : Support for Graphic, Modular and Circular Apple Watch Complications. Get real-time wave data displayed at a glance.
+    fontawesome_icon_name                 : clock
+    
+  - title                                 : Theme selection
+    description                           : Select between dark, light or automatic matching system appearance.
+    fontawesome_icon_name                 : adjust
 
   - title                                 : Historic Data Chart
     description                           : 24-hour charts data. Including time, wave size and swell period.
