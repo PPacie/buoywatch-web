@@ -9,7 +9,44 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest (October 25th, 2020)`
+### `Latest (August 27th, 2023)`
+# **Version 1.3.2**
+- UI fixes and improvements.
+
+<br>
+
+# **Version 1.3.1**
+- Update buoys. Bug fixes and improvements.
+
+<br>
+
+# **Version 1.3.0**
+- New buoys, settings and improvements.
+
+<br>
+
+# **Version 1.2.4**
+- 18 new buoys.
+
+<br>
+
+# **Version 1.2.3**
+- Bug fixes and improvements.
+- Fix a bug that made the app crash when selecting the Home Buoy for the very first time.
+
+<br>
+
+# **Version 1.2.2**
+- Favorites.
+- Over 300 NOAA & worldwide buoys.
+
+<br>
+
+# **Version 1.2.1**
+- New Hawaii and Caribbean buoys.
+
+<br>
+
 # **Version 1.2.0**
 - New iOS 14 Widgets!
 - New watchOS complications supported: Graphic corner; Graphic circular; Modular small; Circular small.
