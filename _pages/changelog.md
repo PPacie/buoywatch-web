@@ -9,8 +9,14 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest (August 27th, 2023)`
-# **Version 1.3.2**
+### `Latest (September 5th, 2023)`
+# **Version 1.4.0**
+- Lock screen widgets
+- New watchOS complications
+- Bug fixes and improvements
+
+<br>
+## **Version 1.3.2**
 - UI fixes and improvements.
 
 <br>
