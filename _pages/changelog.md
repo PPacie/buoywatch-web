@@ -9,13 +9,24 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest (September 5th, 2023)`
-# **Version 1.4.0**
+### `Latest (October 9th, 2023)`
+# **Version 1.4.2**
+- Waves size notifications available on the Main screen.
+
+<br>
+
+## **Version 1.4.1**
+- iOS widgets UI improvement
+
+<br>
+
+## **Version 1.4.0**
 - Lock screen widgets
 - New watchOS complications
 - Bug fixes and improvements
 
 <br>
+
 ## **Version 1.3.2**
 - UI fixes and improvements.
 
