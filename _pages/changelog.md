@@ -9,7 +9,12 @@ Changelog for Buoywatch.
 
 <br>
 
-### `Latest (October 9th, 2023)`
+### `Latest (October 11th, 2023)`
+# **Version 1.4.3**
+- New Bodega Bay and Lakeport buoys in the US.
+
+<br>
+
 # **Version 1.4.2**
 - Waves size notifications available on the Main screen.
 
