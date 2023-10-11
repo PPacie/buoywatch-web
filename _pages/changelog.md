@@ -15,7 +15,7 @@ Changelog for Buoywatch.
 
 <br>
 
-# **Version 1.4.2**
+## **Version 1.4.2**
 - Waves size notifications available on the Main screen.
 
 <br>
