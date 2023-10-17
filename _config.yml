@@ -47,8 +47,8 @@ features                                  :
     description                           : Score the best surf with Notifications. Get alerted when the swell is above a specific wave height. Includes animated GIFs.
     fontawesome_icon_name                 : bell
     
-  - title                                 : iOS Widgets!
-    description                           : Swell info at a glance. Always easily accesible and customizable. Support for Home, Lock screen and Stand by mode iOS Widgets. 
+  - title                                 : Widgets
+    description                           : Swell and wind information at a glance. Always easily accesible and customizable. Support for Home, Lock screen and Stand by mode iOS Widgets. 
     fontawesome_icon_name                 : star
 
   - title                                 : Complications
