@@ -7,8 +7,15 @@ include_in_header: true
 # Changelog
 Changelog for Buoywatch.
 
-### `Latest (October 17th, 2023)`
-# **Version 1.5.0**
+### `Latest (December 9th, 2023)`
+# **Version 2.0.1**
+- Fix a bug where existing users can restore purchases to become pro users again.
+
+## **Version 2.0.0** (December 6th, 2023)
+- Release of Buoywatch PRO.
+- Settings screen update for iOS 16 and 17.
+
+## **Version 1.5.0**
 - iOS 17 support for widgets and stand by mode.
 - New watchOS wind complications!
 
