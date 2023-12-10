@@ -7,9 +7,21 @@ include_in_header: true
 # Changelog
 Changelog for Buoywatch.
 
-### `Latest (December 9th, 2023)`
-# **Version 2.0.1**
+### `Latest (December 10th, 2023)`
+# **Version 2.0.4**
+- Added new 32 buoys from the US coast, Pacific Ocean and Korea.
+- Fix watchOS app (Thanks presserhawaii for the feedback).
+
+## **Version 2.0.3**
+- Added new 32 buoys from the US coast, Pacific Ocean and Korea.
+- Bug fixes and improvements.
+
+## **Version 2.0.2**
 - Fix a bug where existing users can restore purchases to become pro users again.
+ 
+## **Version 2.0.1**
+- Release of Buoywatch PRO.
+- Settings screen update for iOS 16 and 17.
 
 ## **Version 2.0.0** (December 6th, 2023)
 - Release of Buoywatch PRO.
