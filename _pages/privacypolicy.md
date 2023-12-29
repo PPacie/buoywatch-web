@@ -5,7 +5,7 @@ include_in_header: false
 ---
 
 **Last updated**  
-December 22nd, 2019
+December 29nd, 2023
 
 # Privacy Policy
 
@@ -17,7 +17,7 @@ We do not collect nor share any personal information. We deliberately do not sha
 
 ## Information usage
 
-Buoy data is provided by the National Data Buoy Center of NOAA (http://www.ndbc.noaa.gov) and other public services.
+Buoy data is provided by the National Data Buoy Center of NOAA (http://www.ndbc.noaa.gov), Candhis (https://candhis.cerema.fr/), Meteo-France (https://donneespubliques.meteofrance.fr/) and other public services.
 
 ## Your consent
 
@@ -33,4 +33,5 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 | Date | Notes |
 | :--- | :--- |
+| 2023-12-29 | Updated |
 | 2019-12-22 | First published |
