@@ -25,7 +25,7 @@ By using our site or apps, you consent to our privacy policy.
 
 ## Contacting Us
 
-If you have questions regarding this privacy policy, you may email support@buoywatch.com.
+If you have questions regarding this privacy policy, you may email us to support [at] buoywatch.com.
 
 ## Changes to this policy
 
