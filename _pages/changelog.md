@@ -7,8 +7,28 @@ include_in_header: true
 # Changelog
 Changelog for Buoywatch.
 
-### `Latest (December 10th, 2023)`
-# **Version 2.0.4**
+### `Latest (October 30th, 2024)`
+# **Version 2.3.0**
+- Support for new languages.
+
+## **Version 2.2.9**
+- 15 New buoys from US and Micronesia.
+
+## **Version 2.2.4**
+- New Torrey Pines Inner, California buoy.
+
+## **Version 2.2.0**
+- New Spanish buoys were added. Atlantic, Mediterraneans and Canary Island's buoys were added!
+- Search improvements and fixes.
+
+## **Version 2.1.1**
+- The french buoys were updated. Gascogne, Mediterraneans and Caribbean's buoys were also re-added!!
+  
+## **Version 2.1.0**
+- Added new 23 buoys from the US coast, Micronesia, Pacific and Atlantic Oceans.
+- Small UI improvements.
+
+## **Version 2.0.4**
 - Added new 32 buoys from the US coast, Pacific Ocean and Korea.
 - Fix watchOS app (Thanks presserhawaii for the feedback).
 
@@ -23,7 +43,7 @@ Changelog for Buoywatch.
 - Release of Buoywatch PRO.
 - Settings screen update for iOS 16 and 17.
 
-## **Version 2.0.0** (December 6th, 2023)
+## **Version 2.0.0**
 - Release of Buoywatch PRO.
 - Settings screen update for iOS 16 and 17.
 
@@ -89,7 +109,6 @@ Changelog for Buoywatch.
 ## **Version 1.1.0**
 - Brand new iOS app version.
 - Dark mode support.
-
 
 ## **Version 1.0.1**
 New Surf buoys added: 
