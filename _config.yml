@@ -1,5 +1,5 @@
 #page title
-page_title                                : Surf Report & Wave Buoys by Buoywatch app      # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+page_title                                : Surf Report & Swell Buoys by Buoywatch app      # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
 # App Info
 ios_app_id                                : 1479691525                                     # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
@@ -12,7 +12,7 @@ presskit_download_link                    : https://buoywatch.com/assets/press_k
 app_icon                                  : # assets/appicon.png                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  :                                                # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                                # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Wave reports in real-time by checking NOAA marine weather buoys. Buoy readings made easy for surfing. Get aware if the surf is good in advance.
+app_description                           : Get notified when surfing is good—with wave size alerts. NOAA buoy readings & surf forecast in real-time.
 
 enable_apple_watch                        : true                                           # Set to true to display an apple watch app image.
 enable_smart_app_banner                   : true                                           # Set to true to show a smart app banner at top of page on mobile devices.
