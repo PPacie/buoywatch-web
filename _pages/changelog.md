@@ -7,8 +7,15 @@ include_in_header: true
 # Changelog
 Changelog for Buoywatch.
 
-### `Latest (October 30th, 2024)`
-# **Version 2.3.0**
+### `Latest (March 30th, 2025)`
+# **Version 2.3.2**
+- New US Buoys.
+- Display the atmospheric pressure in the available buoys.
+
+## **Version 2.3.1**
+- New Yaquina Channel SW, OR and Neah Bay - Cape Flattery, WA NOAA buoys.
+
+## **Version 2.3.0**
 - Support for new languages.
 
 ## **Version 2.2.9**
