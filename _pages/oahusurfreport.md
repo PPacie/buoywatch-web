@@ -9,7 +9,7 @@ include_in_footer: false
 <p><strong>Coordinates:</strong> <span id="buoy-coords">Loading...</span></p>
 
 <div id="buoy-data"
-     data-buoy="46025"
+     data-buoy="51201"
      data-lat="21.671"
      data-lon="158.118"
      style="background:#1e1e1e;padding:1em;border-radius:10px;color:white;max-width:400px;font-family:sans-serif;">
