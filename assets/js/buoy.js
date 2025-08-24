@@ -8,15 +8,21 @@ document.addEventListener("DOMContentLoaded", async () => {
   const lat = el.dataset.lat;
   const lon = el.dataset.lon;
 
-  try {
-    const res = await fetch(`https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.txt`);
-    const text = await res.text();
-    const lines = text.trim().split("\n");
-    const rows = lines.slice(2, 26).map(l => l.trim().split(/\s+/)); // skip header + column line
+  // Proxy through AllOrigins to bypass CORS
+  const proxyUrl = "https://api.allorigins.win/raw?url=";
+  const targetUrl = `https://www.ndbc.noaa.gov/data/realtime2/${buoyId}.txt`;
 
-    // latest row
+  try {
+    const res = await fetch(proxyUrl + encodeURIComponent(targetUrl));
+    if (!res.ok) throw new Error("Fetch failed");
+    const text = await res.text();
+
+    const lines = text.trim().split("\n");
+    const rows = lines.slice(2, 26).map(l => l.trim().split(/\s+/));
+
     const latest = rows[0];
-    // Format is [YY, MM, DD, hh, mm, WDIR, WSPD, GST, WVHT, DPD, APD, MWD, PRES, ATMP, WTMP, DEWP, VIS, TIDE]
+    if (!latest || latest.length < 15) throw new Error("Unexpected NOAA format");
+
     const [YY, MM, DD, hh, mm, WDIR, WSPD, GST, WVHT, DPD, APD, MWD, PRES, ATMP, WTMP] = latest;
 
     document.getElementById("updated-time").textContent = `${MM}/${DD} ${hh}:${mm}`;
@@ -54,7 +60,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       }
     });
   } catch (err) {
-    document.getElementById("buoy-data").innerHTML = `<p style="color:red;">Error loading buoy data</p>`;
+    document.getElementById("buoy-data").innerHTML =
+      `<p style="color:red;">Error loading buoy data: ${err.message}</p>`;
     console.error("Buoy fetch error:", err);
   }
 });
