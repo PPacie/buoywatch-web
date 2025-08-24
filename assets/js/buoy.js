@@ -19,50 +19,64 @@ document.addEventListener("DOMContentLoaded", async () => {
     const lines = text.trim().split("\n");
     if (lines.length < 3) throw new Error("No data");
 
-    // Parse header line to map column names → index
+    // Parse header → map column names → index
     const header = lines[0].replace(/^#/, "").trim().split(/\s+/);
     const colIndex = {};
     header.forEach((h, i) => colIndex[h] = i);
 
-    // Extract rows (skip first 2 header lines)
+    // Extract rows (skip 2 header lines)
     const rows = lines.slice(2, 26).map(l => l.trim().split(/\s+/));
     const latest = rows[0];
 
-    // Helper: get field safely
-    const getField = (name) => {
+    // Helper to get field safely
+    const getField = (row, name) => {
       const idx = colIndex[name];
       if (idx === undefined) return null;
-      const val = latest[idx];
+      const val = row[idx];
       return (val && val !== "MM") ? val : null;
     };
 
-    // Extract dynamically
-    const time = `${getField("MM") || latest[colIndex["MM"]]}-${getField("DD") || latest[2]} ${getField("hh")}:${getField("mm")}`;
-    const wvht = getField("WVHT"); // Wave height
-    const dpd  = getField("DPD");  // Dominant wave period
-    const wdir = getField("WDIR"); // Wind direction
-    const wspd = getField("WSPD"); // Wind speed
-    const atmp = getField("ATMP");
-    const wtmp = getField("WTMP");
+    // Proper datetime
+    const yy = getField(latest, "YY");
+    const mo = getField(latest, "MM");
+    const dd = getField(latest, "DD");
+    const hh = getField(latest, "hh");
+    const mn = getField(latest, "mm");
+    const timestamp = yy && mo && dd && hh && mn
+      ? `${yy}-${mo}-${dd} ${hh}:${mn} UTC`
+      : "N/A";
 
-    // Fill DOM dynamically (only if available)
-    document.getElementById("updated-time").textContent = time;
+    // Extract fields (only if available)
+    const wvht = getField(latest, "WVHT"); // Wave height
+    const dpd  = getField(latest, "DPD");  // Dominant period
+    const wspd = getField(latest, "WSPD"); // Wind speed
+    const wdir = getField(latest, "WDIR"); // Wind dir
+    const atmp = getField(latest, "ATMP"); // Air temp
+    const wtmp = getField(latest, "WTMP"); // Water temp
+
+    // Fill DOM
+    document.getElementById("updated-time").textContent = timestamp;
     document.getElementById("wave-info").textContent =
-      wvht ? `${wvht} m ${dpd ? ` @ ${dpd}s` : ""}` : "No wave data";
+      wvht ? `${wvht} m${dpd ? ` @ ${dpd}s` : ""}` : "No wave data";
     document.getElementById("wind-info").textContent =
-      wspd ? `${wspd} m/s ${wdir ? `Dir ${wdir}°` : ""}` : "No wind data";
+      wspd ? `${wspd} m/s${wdir ? ` dir ${wdir}°` : ""}` : "No wind data";
     document.getElementById("air-temp").textContent =
       atmp ? `${atmp} °C` : "N/A";
     document.getElementById("water-temp").textContent =
       wtmp ? `${wtmp} °C` : "N/A";
     document.getElementById("buoy-coords").textContent = `${lat}, ${lon}`;
 
-    // Build wave height history chart if WVHT exists
+    // Build wave height chart if WVHT exists
     if (colIndex["WVHT"] !== undefined) {
-      const labels = rows.map(r => `${r[colIndex["hh"]]}:${r[colIndex["mm"]]}`);
+      const labels = rows.map(r => {
+        const h = getField(r, "hh");
+        const m = getField(r, "mm");
+        return (h && m) ? `${h}:${m}` : "";
+      });
+
       const waveHeights = rows.map(r => {
-        const val = r[colIndex["WVHT"]];
-        return (val && val !== "MM") ? parseFloat(val) : 0;
+        const val = getField(r, "WVHT");
+        return val ? parseFloat(val) : 0;
       });
 
       new Chart(document.getElementById("waveHistoryChart"), {
@@ -73,10 +87,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             label: "Wave Height (m)",
             data: waveHeights.reverse(),
             backgroundColor: waveHeights.map(h => {
-              if (h >= 3) return "#f44336"; // high waves
-              if (h >= 2) return "#ff9800"; // medium
-              if (h >= 1) return "#ffeb3b"; // low
-              return "#4caf50";             // calm
+              if (h >= 3) return "#f44336";
+              if (h >= 2) return "#ff9800";
+              if (h >= 1) return "#ffeb3b";
+              return "#4caf50";
             })
           }]
         },
@@ -92,6 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       document.getElementById("waveHistoryChart").outerHTML =
         "<p>No wave history data available</p>";
     }
+
   } catch (err) {
     document.getElementById("buoy-data").innerHTML =
       `<p style="color:red;">Error loading buoy data: ${err.message}</p>`;
